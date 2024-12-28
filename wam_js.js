@@ -32,7 +32,7 @@ function set_game(){
     }
 
     //call function at set interval
-    setInterval(set_mole, 1000);
+    setInterval(set_mole, 1500);
     setInterval(set_plant, 1800);
 }
 
@@ -58,7 +58,7 @@ function set_mole(){
     console.log("set mole called");
 
     let mole = document.createElement("img");
-    mole.src = "./monty.png";
+    mole.src = "./MontyMole.webp";
 
     let num = get_random_tile();
 
@@ -115,13 +115,40 @@ function set_plant(){
 
             score += 10;
 
+            //delete the mole once it has been clicked to prevent duplication
+            current_mole_tile.innerHTML ="";
+
+
             //update score
             document.getElementById("score").innerText = score.toString();
         }
         else if (this == current_plant_tile){
 
-            document.getElementById("score").innerText = "Game Over" +score.toString();
+            document.getElementById("score").innerText = "Game Over: " +score.toString();
             game_over = true;
         }
 
     }
+
+// create a reset button
+
+
+
+
+
+
+
+
+
+    //function for responsive nav bar
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+
+
+function topbar_navigation_function() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }

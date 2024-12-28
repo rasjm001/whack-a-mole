@@ -6,16 +6,45 @@
     <title>Whack a Mole</title>
     <!-- link to the css sheet-->
     <link rel="stylesheet" href="wack_a_mole_css.css">
+    
+    <!-- link to the stylesheet with the top down menu-->
+    <link rel ="stylesheet" href="../HomePage/main_css.css">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- link to the js-->
      <script src = "wam_js.js"></script>
 </head>
 
 <body>
+
+ <!--Top navigation bar-->
+ <div class="topnav" id="myTopnav">
+  <a href="../HomePage/main_html.html" class="active">Home</a> 
+  <a href="../project_one_simple_tutorial/index.html"> Bouncing Balls </a>
+  <a href="../whack_a_mole/index.html"> Whack a Mole </a>
+  <a href="../SimpleGame/Index.html"> Defence Game</a>
+  <!-- <a href="../Demo_3/Index.html"> Demo_3</a> -->
+  <a href ="../Capstone Project 1/capstone_project.html"> Capstone Project</a>
+  <a href="javascript:void(0);" class="icon" onclick="topbar_navigation_function()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
     <h1>Whack a Mole</h1>
     <!-- give h2 id score to be able to link to js later-->
     <h2 id = "score"> 0 </h2>
 
     <div id ="board"></div>
+
+    <div> 
+      <!-- HTML !-->
+<button class="button-78" role="button"> Reset</button>
+
+
+    </div>
     
 </body>
 </html>
